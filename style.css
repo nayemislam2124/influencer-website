@@ -6,11 +6,20 @@
 body{
     font-family:poppins;
 }
+main{
+    max-width:1440px;
+    margin:0px auto;
+}
 /* shared styles  */
 .section-title{
     font-size:24px;
     font-weight:700;
     color:#3a3a3a;
+}
+.text-color-gray{
+    color:#727272;
+    font-size:1rem;
+    font-weight:700;
 }
 /* header section styles */
 nav {
@@ -23,10 +32,207 @@ nav ul li{
     list-style:none;
     display:inline-block;
     margin-right:1rem;
+    transition:all 0.4s ease;
 }
 nav ul li a{
     text-decoration:none;
     color:#3a3a3a;
     font-weight:600;
    
+}
+.header-text-and-image{
+    display:flex;
+    justify-content:space-evenly;
+}
+.header-text{
+    margin-left:4rem;
+    margin-top:4rem;
+}
+.header-text h3{
+    font-size:2rem;
+}
+.header-text h6{
+    color:#3a3a3a;
+    font-weight:600;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.header-text button{
+    border:none;
+    border-radius:40px;
+    padding:10px 25px;
+    color:white;
+    font-weight:700;
+    background-color:#e02c6d;
+}
+.header-images{
+    width:300px;
+    height:300px;
+    background-image:url("images/circle.jpg");
+    background-size:300px;
+}
+.header-images img {
+    width:300px;
+}
+/* online shop images styles  */
+.online-shop{
+    width:700px;
+    height:auto;
+    border:1px solid rgba(128, 128, 128, 0.498); 
+    margin:0 auto;
+    margin-top:2rem;
+    transition:all 0.4s ease;
+}
+.online-shop img {
+    width:5rem;
+    margin-right:2rem;
+}
+/* collection section styles  */
+.collection{
+    max-width:700px;
+    margin:4rem auto 0rem;
+}
+.collection h3{
+    text-align:center;
+    margin-bottom:2rem;
+}
+.collection-container{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    column-gap:0;
+    row-gap:2rem;
+    justify-content:center;
+    align-items:center;
+    
+}
+.card{
+    width:200px;
+    padding:1rem;
+    height:380px;
+    background:white;
+    border-radius:5px;
+    box-shadow:2px 2px 10px rgba(128, 128, 128, 0.345);
+}
+.card img {
+    width:100%;
+}
+.card h2{
+    color:#3a3a3a;
+    font-weight:600;
+}
+.card h5{
+    color:#727272;
+    font-weight:500;
+}
+
+/* responsive tablet devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    nav{
+        flex-direction:column;
+        gap:2rem;
+    }
+    nav h3{
+        text-align:center;
+        font-size:1rem;
+    }
+    nav ul li{
+        display:block;
+        text-align:center;
+        margin:1rem;
+        background-color:bisque;
+        padding:0.5rem 4rem;
+        border-radius:1rem;
+    }
+    .header-text-and-image{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:2rem;
+    }
+    .header-text{
+        text-align:center;
+        margin:0;
+    }
+    .online-shop{
+        display:flex;
+        width:auto;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:2rem;
+        border:none;
+    }
+    .online-shop img{
+        width:30%;
+        height:auto;
+        padding:3rem;
+        border-radius:1rem;
+        background-color:rgba(255, 228, 196, 0.365);
+        border:1px solid black;
+    } 
+    
+    .collection-container{
+        grid-template-columns:repeat(2,1fr);
+        justify-content:center;
+        align-items:center;
+        padding:2rem;
+
+    }
+    .card{
+        width:90%;
+        height:100%;
+        padding:2rem;
+        margin-right:1rem;
+    }
+   
+}
+/* responsive mobile devices  */
+@media screen and (max-width: 576px) {
+    nav{
+        flex-direction:column;
+        gap:2rem;
+    }
+    nav h3{
+        text-align:center;
+        font-size:1rem;
+    }
+    nav ul li{
+        display:block;
+        text-align:center;
+        margin:2rem;
+        
+    }
+    .header-text-and-image{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:2rem;
+    }
+    .header-text{
+        text-align:center;
+        margin:0;
+    }
+    .online-shop{
+        display:flex;
+        width:auto;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:2rem;
+        border:none;
+    }
+    .online-shop img{
+        width:30%;
+    }
+    .collection-container{
+        grid-template-columns:repeat(1,1fr);
+        justify-content:center;
+        align-items:center;
+        padding:2rem;
+    }
+    .card{
+        width:100%;
+        height:auto;
+        padding:2rem;
+    }
 }
